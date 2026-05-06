@@ -1,0 +1,36 @@
+Event	ID	Name			Wwise Object Path	Notes
+	184841680	STWorms_Unpause_Music			\Default Work Unit\STWorms_Unpause_Music	
+	1639109807	STWorms_Pause_Music			\Default Work Unit\STWorms_Pause_Music	
+	3658981275	STWorms_Play_Music_System			\Default Work Unit\STWorms_Play_Music_System	
+
+State Group	ID	Name			Wwise Object Path	Notes
+	549431000	bossStatus			\Default Work Unit\bossStatus	
+	792781730	Music_system			\Default Work Unit\Music_system	
+	1810963621	STWorms_gameplaySongChoice			\Default Work Unit\STWorms_gameplaySongChoice	
+
+State	ID	Name	State Group			Notes
+	655265632	alive	bossStatus			
+	748895195	None	bossStatus			
+	2044049779	dead	bossStatus			
+	89505537	Gameplay	Music_system			
+	580146960	Bossfight	Music_system			
+	748895195	None	Music_system			
+	778026301	SecretLevel	Music_system			
+	2607556080	Menu	Music_system			
+	514064485	Fight	STWorms_gameplaySongChoice			
+	748895195	None	STWorms_gameplaySongChoice			
+	3457533948	sunkentombsStage	STWorms_gameplaySongChoice			
+
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	151362964	playerHealth			\Default Work Unit\playerHealth	
+	1010989040	teleporterPlayerStatus			\Default Work Unit\teleporterPlayerStatus	
+	3729143042	Volume_MSX			\Default Work Unit\Volume_MSX	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	818931403	STStageLoop	C:\Users\rcmce\Documents\WwiseProjects\Sunken Tombs Worms\.cache\Windows\SFX\sunkentombsStage_83EF6940.wem		\Interactive Music Hierarchy\Default Work Unit\STWorms_Music_System\GameplaySongChoice\STStage\STStageLoop\STStageLoop		5017
+	1044272935	FightLoop	C:\Users\rcmce\Documents\WwiseProjects\Sunken Tombs Worms\.cache\Windows\SFX\sunkentombsBoss_83EF6940.wem		\Interactive Music Hierarchy\Default Work Unit\STWorms_Music_System\BossSongChoice\Fight\FightLoop\FightLoop		3880
+
+Streamed Audio	ID	Name	Audio source file	Generated audio file	Wwise Object Path	Notes
+	818931403	STStageLoop	C:\Users\rcmce\Documents\WwiseProjects\Sunken Tombs Worms\.cache\Windows\SFX\sunkentombsStage_83EF6940.wem	818931403.wem	\Interactive Music Hierarchy\Default Work Unit\STWorms_Music_System\GameplaySongChoice\STStage\STStageLoop\STStageLoop	
+	1044272935	FightLoop	C:\Users\rcmce\Documents\WwiseProjects\Sunken Tombs Worms\.cache\Windows\SFX\sunkentombsBoss_83EF6940.wem	1044272935.wem	\Interactive Music Hierarchy\Default Work Unit\STWorms_Music_System\BossSongChoice\Fight\FightLoop\FightLoop	
+

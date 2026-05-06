@@ -1,0 +1,16 @@
+{
+	"strings": {
+		"WORM_MAP_SUNKENTOMB_NAME": "Sunken Tombs",
+		"WORM_MAP_SUNKENTOMB_SUBTITLE": "Underwater Catacombs",
+		"WORM_BAZAAR_SEER_SUNKENTOMB": "<style=cWorldEvent>You dream of lost history.</style>",
+		"WORM_MAP_SUNKENTOMB_LORE": "<style=cMono>\n========================================\n====   MyBabel Machine Translator   ====\n====     [Version 12.45.1.009 ]   ======\n========================================\nTraining... <100000000 cycles>\nTraining... <1166431 cycles>\nComplete!\nDisplay result? Y/N\nY\n================================</style>\nAh. The sacred [Catacombs]. Once a place of great mourning, and great reverence for our savior. A grand mural, it was said, was erected within their halls, depicting our valiant struggle against the [Invaders] and, ultimately, our salvation.\n\nOf course, despite our savior's greatest efforts, the [Invaders] had found a way to trespass into our paradise, furious as ever. They sought to desecrate the [Catacombs]... for what purpose? Vengeance? Spite? Indeed, that [artifact], the origin of our strife... its importance remains unbeknownst to us, even now.\n\nOur strongest ramparts were not enough to keep the [Invaders] contained. Their numbers outmatched ours, and after a long and gruesome battle, they finally raided the [Catacombs]. They pillaged and stole our pots and vases, they tore up our beautiful tapestries, and still they were not satisfied with what they had found! In a fit of rage, they began punching holes into our brick walls, they shattered the dense rock enveloping the [Catacombs], water came rushing through, and the [Catacombs] became one with the sea.\n\nOnly our bravest have dared to find that place again... but none have returned alive.",
+
+		"UNLOCKABLE_LOG_STAGES_STSCENE": "Environment Log: Sunken Tombs",
+
+		"WORM_ACRIDCAGE_NAME": "Monster Cage",
+		"WORM_ACRIDCAGE_CONTEXT": "Open?",
+		"WORM_ACRIDCAGE_DESCRIPTION": "A metal cage with a feral monster locked up inside. Open the cage to unleash it, then defeat it and return to the cage to obtain a legendary item.",
+		"WORM_ACRIDCAGE_LORE": "Acrid stuck in cage. Very sad"
+		
+	}
+}

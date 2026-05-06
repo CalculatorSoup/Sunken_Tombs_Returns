@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<SoundBanksInfo Platform="Windows" BasePlatform="Windows" SchemaVersion="16" SoundBankVersion="150">
+	<RootPaths>
+		<ProjectRoot>../..</ProjectRoot>
+		<SourceFilesRoot>../../.cache/Windows</SourceFilesRoot>
+		<SoundBanksRoot>.</SoundBanksRoot>
+		<ExternalSourcesInputFile></ExternalSourcesInputFile>
+		<ExternalSourcesOutputRoot>.</ExternalSourcesOutputRoot>
+	</RootPaths>
+	<DialogueEvents/>
+	<SoundBanks>
+		<SoundBank Id="588637785" Type="User" Language="SFX" Hash="{9A05F9A1-3047-BD81-921B-EE00A825C252}">
+			<ShortName>STWormsMusic</ShortName>
+			<Path>STWormsMusic.bnk</Path>
+			<Media>
+				<File Id="818931403" Language="SFX" Streaming="true" Location="Memory">
+					<ShortName>sunkentombsStage.wav</ShortName>
+					<Path>Media/818931403.wem</Path>
+					<CachePath>SFX/sunkentombsStage_83EF6940.wem</CachePath>
+					<PrefetchSize>5017</PrefetchSize>
+				</File>
+				<File Id="1044272935" Language="SFX" Streaming="true" Location="Memory">
+					<ShortName>sunkentombsBoss.wav</ShortName>
+					<Path>Media/1044272935.wem</Path>
+					<CachePath>SFX/sunkentombsBoss_83EF6940.wem</CachePath>
+					<PrefetchSize>3880</PrefetchSize>
+				</File>
+			</Media>
+			<Events>
+				<Event Id="1639109807" Name="STWorms_Pause_Music">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="792781730" Id="580146960"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="1810963621" Id="514064485"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="State" GroupId="549431000" Id="655265632"/>
+											<MediaRefs>
+												<MediaRef Id="1044272935"/>
+											</MediaRefs>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="1810963621" Id="514064485"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="State" GroupId="549431000" Id="2044049779"/>
+											<MediaRefs>
+												<MediaRef Id="1044272935"/>
+											</MediaRefs>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="792781730" Id="89505537"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="1810963621" Id="3457533948"/>
+									<MediaRefs>
+										<MediaRef Id="818931403"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="3658981275" Name="STWorms_Play_Music_System">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="792781730" Id="580146960"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="1810963621" Id="514064485"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="State" GroupId="549431000" Id="655265632"/>
+											<MediaRefs>
+												<MediaRef Id="1044272935"/>
+											</MediaRefs>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="1810963621" Id="514064485"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="State" GroupId="549431000" Id="2044049779"/>
+											<MediaRefs>
+												<MediaRef Id="1044272935"/>
+											</MediaRefs>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="792781730" Id="89505537"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="1810963621" Id="3457533948"/>
+									<MediaRefs>
+										<MediaRef Id="818931403"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+				<Event Id="184841680" Name="STWorms_Unpause_Music">
+					<SwitchContainers>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="792781730" Id="580146960"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="1810963621" Id="514064485"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="State" GroupId="549431000" Id="655265632"/>
+											<MediaRefs>
+												<MediaRef Id="1044272935"/>
+											</MediaRefs>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="1810963621" Id="514064485"/>
+									<Children>
+										<SwitchContainer>
+											<SwitchValue GroupType="State" GroupId="549431000" Id="2044049779"/>
+											<MediaRefs>
+												<MediaRef Id="1044272935"/>
+											</MediaRefs>
+										</SwitchContainer>
+									</Children>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+						<SwitchContainer>
+							<SwitchValue GroupType="State" GroupId="792781730" Id="89505537"/>
+							<Children>
+								<SwitchContainer>
+									<SwitchValue GroupType="State" GroupId="1810963621" Id="3457533948"/>
+									<MediaRefs>
+										<MediaRef Id="818931403"/>
+									</MediaRefs>
+								</SwitchContainer>
+							</Children>
+						</SwitchContainer>
+					</SwitchContainers>
+				</Event>
+			</Events>
+			<GameParameters>
+				<GameParameter Id="151362964" Name="playerHealth"/>
+				<GameParameter Id="1010989040" Name="teleporterPlayerStatus"/>
+				<GameParameter Id="3729143042" Name="Volume_MSX"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="549431000" Name="bossStatus">
+					<States>
+						<State Id="655265632" Name="alive"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2044049779" Name="dead"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="792781730" Name="Music_system">
+					<States>
+						<State Id="89505537" Name="Gameplay"/>
+						<State Id="580146960" Name="Bossfight"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="778026301" Name="SecretLevel"/>
+						<State Id="2607556080" Name="Menu"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1810963621" Name="STWorms_gameplaySongChoice">
+					<States>
+						<State Id="514064485" Name="Fight"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="3457533948" Name="sunkentombsStage"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+		<SoundBank Id="1355168291" Type="User" Language="SFX" Hash="{3F0FA348-8066-82A9-A224-D3CBBB8AB86C}">
+			<ShortName>Init</ShortName>
+			<Path>Init.bnk</Path>
+			<Plugins>
+				<AudioDevices>
+					<Plugin Id="2317455096" Name="No_Output" LibName="No Output" LibId="11862023"/>
+					<Plugin Id="3859886410" Name="System" LibName="System" LibId="11403271"/>
+				</AudioDevices>
+			</Plugins>
+			<Busses>
+				<Bus Id="3803692087" Name="Master Audio Bus"/>
+			</Busses>
+			<GameParameters>
+				<GameParameter Id="151362964" Name="playerHealth"/>
+				<GameParameter Id="1010989040" Name="teleporterPlayerStatus"/>
+				<GameParameter Id="3673881719" Name="Volume_SFX"/>
+				<GameParameter Id="3695994288" Name="Volume_Master"/>
+				<GameParameter Id="3729143042" Name="Volume_MSX"/>
+			</GameParameters>
+			<StateGroups>
+				<StateGroup Id="549431000" Name="bossStatus">
+					<States>
+						<State Id="655265632" Name="alive"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="2044049779" Name="dead"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="792781730" Name="Music_system">
+					<States>
+						<State Id="89505537" Name="Gameplay"/>
+						<State Id="580146960" Name="Bossfight"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="778026301" Name="SecretLevel"/>
+						<State Id="2607556080" Name="Menu"/>
+					</States>
+				</StateGroup>
+				<StateGroup Id="1810963621" Name="STWorms_gameplaySongChoice">
+					<States>
+						<State Id="514064485" Name="Fight"/>
+						<State Id="748895195" Name="None"/>
+						<State Id="3457533948" Name="sunkentombsStage"/>
+					</States>
+				</StateGroup>
+			</StateGroups>
+		</SoundBank>
+	</SoundBanks>
+	<FileHash>{5E96C953-E0BB-CCF2-7C36-13B9D5323CFB}</FileHash>
+</SoundBanksInfo>
