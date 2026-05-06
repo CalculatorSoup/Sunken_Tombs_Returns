@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StagingPaths:
   - <MSUBuildPath>
-  url: 
+  url: https://github.com/CalculatorSoup/Sunken_Tombs_Returns
 --- !u!114 &-732514325962398760
 MonoBehaviour:
   m_ObjectHideFlags: 0
