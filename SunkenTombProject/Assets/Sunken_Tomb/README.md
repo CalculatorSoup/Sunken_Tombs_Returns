@@ -15,7 +15,7 @@ Instead of a legendary chest, there's a cage hidden in a random spot in the map.
 
 
 # Simulacrum
-Sunken Tomb also comes with a Void replication, exclusive to SotV's Simulacrum gamemode. It has a few extra geysers and some vertical lifts (like the ones in Repurposed Crater) to help with getting around.
+Sunken Tomb also comes with a Void replication, exclusive to SotV's Simulacrum gamemode. It has a few extra geysers and some vertical lifts (like the ones in Repurposed Crater) to help with getting around. It also has Mini Mushrums instead of Hermit Crabs.
 
 ![](https://github.com/CalculatorSoup/Sunken_Tombs_Returns/blob/main/SunkenTombProject/Assets/preview%20simulacrum.png?raw=true)
 

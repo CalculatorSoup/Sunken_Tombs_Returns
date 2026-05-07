@@ -45,7 +45,7 @@ namespace SunkenTombWorm
 
         public const string Name = "Sunken_Tombs_Returns";
 
-        public const string Version = "1.0.0";
+        public const string Version = "1.0.1";
 
         public const string GUID = Author + "." + Name;
 
@@ -72,13 +72,13 @@ namespace SunkenTombWorm
 
             ConfigSetup();
 
-            AddEntityStates();
-
             ContentManager.collectContentPackProviders += GiveToRoR2OurContentPackProviders;
 
             RoR2.Language.collectLanguageRootFolders += CollectLanguageRootFolders;
 
             On.RoR2.MusicController.StartIntroMusic += MusicController_StartIntroMusic;
+
+            AddEntityStates();
 
             SceneManager.sceneLoaded += SceneSetup;
 
@@ -104,7 +104,7 @@ namespace SunkenTombWorm
             AkSoundEngine.PostEvent("STWorms_Play_Music_System", self.gameObject);
         }
 
-        private void AddEntityStates()
+        public void AddEntityStates()
         {
             ContentAddition.AddEntityState<Open>(out _); //acrid cage open state
             ContentAddition.AddEntityState<Closed>(out _); //acrid cage closed state

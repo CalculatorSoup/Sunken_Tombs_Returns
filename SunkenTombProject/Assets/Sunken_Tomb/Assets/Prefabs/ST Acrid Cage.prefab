@@ -587,10 +587,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   customName: 
   initialStateType:
-    _typeName: SunkenTombWorm.EntityStates.AcridCage.Closed, Sunken_Tomb_wormsworms,
+    _typeName: SunkenTombWorm.EntityStates.AcridCage.Closed, Sunken_Tombs_Returns,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   mainStateType:
-    _typeName: SunkenTombWorm.EntityStates.AcridCage.Closed, Sunken_Tomb_wormsworms,
+    _typeName: SunkenTombWorm.EntityStates.AcridCage.Closed, Sunken_Tombs_Returns,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   debug: 0
 --- !u!114 &8005572109364282241
@@ -620,10 +620,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   openState:
-    _typeName: SunkenTombWorm.EntityStates.AcridCage.Open, Sunken_Tomb_wormsworms,
+    _typeName: SunkenTombWorm.EntityStates.AcridCage.Open, Sunken_Tombs_Returns,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
   closedState:
-    _typeName: SunkenTombWorm.EntityStates.AcridCage.Closed, Sunken_Tomb_wormsworms,
+    _typeName: SunkenTombWorm.EntityStates.AcridCage.Closed, Sunken_Tombs_Returns,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 --- !u!114 &1275423718378208929
 MonoBehaviour:
@@ -719,7 +719,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   address: RoR2/Base/Chest1/Chest1.prefab
   setPositionAndRotationToZero: 1
+  setPositionToZero: 1
+  setRotationToZero: 1
   useLocalPositionAndRotation: 1
+  overrideLocalScale: 0
+  newLocalScale: {x: 1, y: 1, z: 1}
   refreshInEditor: 1
   hasNetworkIdentity: 1
 --- !u!1 &8986429163033151583
@@ -768,7 +772,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   address: RoR2/Base/Barrel1/Barrel1.prefab
   setPositionAndRotationToZero: 1
+  setPositionToZero: 1
+  setRotationToZero: 1
   useLocalPositionAndRotation: 1
+  overrideLocalScale: 0
+  newLocalScale: {x: 1, y: 1, z: 1}
   refreshInEditor: 1
   hasNetworkIdentity: 1
 --- !u!1001 &9161125227630438244

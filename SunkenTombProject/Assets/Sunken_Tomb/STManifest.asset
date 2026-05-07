@@ -113,7 +113,7 @@ MonoBehaviour:
   Name: Sunken_Tombs_Returns
   Description: A 3D adaptation of Sunken Tombs from Risk of Rain 1, added to RoR2
     as a Stage 4 map. Also includes a Simulacrum variant!
-  Version: 1.0.0
+  Version: 1.0.1
   Dependencies:
   - {fileID: 11400000, guid: 2d4d09ec817c24698d35dc9bf0704fdc, type: 2}
   - {fileID: 11400000, guid: f0d760e9d4649854da675f3b2978b41b, type: 2}
@@ -155,7 +155,8 @@ MonoBehaviour:
   m_Name: Files
   m_EditorClassIdentifier: 
   StagingPaths:
-  - <MSUBuildPath>
+  - <MSUBuildPathStreamingSoundbank>
   includeMetaFiles: 0
   files:
+  - {fileID: 102900000, guid: b640ae68e4253ea44a10546968cd8eea, type: 3}
   - {fileID: 102900000, guid: b640ae68e4253ea44a10546968cd8eea, type: 3}

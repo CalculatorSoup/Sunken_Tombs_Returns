@@ -5,6 +5,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Path = System.IO.Path;
+using BepInEx;
 
 namespace SunkenTombWorm.Content
 {
@@ -26,7 +27,10 @@ namespace SunkenTombWorm.Content
 
             var assetsFolderFullPath = Path.GetDirectoryName(typeof(ContentProvider).Assembly.Location);
             assetDirectory = assetsFolderFullPath;
-            var musicFolderFullPath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(typeof(ContentProvider).Assembly.Location), "soundbanks");
+            var musicFolderFullPath = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(typeof(ContentProvider).Assembly.Location), "Soundbanks");
+            //var musicFolderFullPath2 = System.IO.Path.Combine(System.IO.Path.GetDirectoryName(base.Info.Location), "Soundbanks");
+            Log.Debug(musicFolderFullPath);
+
             LoadSoundBanks(musicFolderFullPath);
 
             AssetBundle scenesAssetBundle = null;

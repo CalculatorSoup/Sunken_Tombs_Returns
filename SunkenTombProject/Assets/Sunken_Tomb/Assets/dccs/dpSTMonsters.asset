@@ -54,25 +54,28 @@ MonoBehaviour:
     - dccs: {fileID: 0}
       familyDccs:
         _asset: {fileID: 0}
-        _address: 3736181fdcb9e3b40a1472b8efe4a1c2
+        _address: 5229a570940ddd342b55760e75c2272e
         _useDirectReference: 0
       weight: 1
       requiredExpansions: []
     - dccs: {fileID: 0}
       familyDccs:
         _asset: {fileID: 0}
-        _address: 74cc25007c7994343afdbfd1e9ab67a0
+        _address: fd0c45fdfe4d1994281f01743f10c4dd
         _useDirectReference: 0
       weight: 1
-      requiredExpansions:
-      - _asset: {fileID: 0}
-        _address: 234e83997deed274291470be69e7662e
-        _useDirectReference: 0
-        _canLoadFromCatalog: 0
+      requiredExpansions: []
     - dccs: {fileID: 0}
       familyDccs:
         _asset: {fileID: 0}
-        _address: a5738804af60cad499ad1483fcabb929
+        _address: 721b63a126c0b5c4ba12f49735d704ae
+        _useDirectReference: 0
+      weight: 1
+      requiredExpansions: []
+    - dccs: {fileID: 0}
+      familyDccs:
+        _asset: {fileID: 0}
+        _address: f3bfb4a77bbec33489b14d71aed64a13
         _useDirectReference: 0
       weight: 1
       requiredExpansions:
