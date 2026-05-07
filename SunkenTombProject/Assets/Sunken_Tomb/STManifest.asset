@@ -155,8 +155,7 @@ MonoBehaviour:
   m_Name: Files
   m_EditorClassIdentifier: 
   StagingPaths:
-  - <MSUBuildPathStreamingSoundbank>
+  - <MSUBuildPathPlugins>
   includeMetaFiles: 0
   files:
-  - {fileID: 102900000, guid: b640ae68e4253ea44a10546968cd8eea, type: 3}
   - {fileID: 102900000, guid: b640ae68e4253ea44a10546968cd8eea, type: 3}
