@@ -96,7 +96,7 @@ Material:
     - _EnableFog: 0
     - _EnableLargeBump: 0
     - _FOAM: 1
-    - _FoamSize: 0.2
+    - _FoamSize: 0.05
     - _Frequency: 0.97
     - _GlossMapScale: 1
     - _Glossiness: 0.5

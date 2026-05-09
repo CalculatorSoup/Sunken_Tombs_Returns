@@ -37,11 +37,13 @@ namespace SunkenTombWorm
                 if (!Colossus.DefaultStageList.Value.Contains(SunkenTomb.mapName))
                 {
                     DirectorAPI.Helpers.AddNewMonsterToStage(holder, false, DirectorAPI.Stage.Custom, SunkenTomb.mapName);
-                    Log.Info("Colossus Spider added to Sunken Tombs (wormsworms)'s spawn pool.");
+                    DirectorAPI.Helpers.RemoveExistingMonsterFromStage(DirectorAPI.Helpers.MonsterNames.StoneTitan, DirectorAPI.Stage.Custom, SunkenTomb.mapName);
+                    Log.Info("Colossus added to Sunken Tombs (wormsworms)'s spawn pool.");
                 }
                 if (!Colossus.DefaultStageList.Value.Contains(SunkenTomb.simuName))
                 {
                     DirectorAPI.Helpers.AddNewMonsterToStage(holder, false, DirectorAPI.Stage.Custom, SunkenTomb.simuName);
+                    DirectorAPI.Helpers.RemoveExistingMonsterFromStage(DirectorAPI.Helpers.MonsterNames.StoneTitan, DirectorAPI.Stage.Custom, SunkenTomb.simuName);
                     Log.Info("Colossus added to Sunken Tombs (wormsworms)'s simulacrum spawn pool.");
                 }
 

@@ -45,7 +45,7 @@ namespace SunkenTombWorm
 
         public const string Name = "Sunken_Tombs_Returns";
 
-        public const string Version = "1.0.1";
+        public const string Version = "1.1.0";
 
         public const string GUID = Author + "." + Name;
 
@@ -183,7 +183,7 @@ namespace SunkenTombWorm
             toggleColossus =
                 base.Config.Bind<bool>("01 - Monsters: EnemiesReturns",
                                        "Enable Colossus",
-                                       true,
+                                       false,
                                        "If true, Collossi will appear in Sunken Tombs.");
             toggleClayMen =
                 base.Config.Bind<bool>("03 - Monsters: Misc.",

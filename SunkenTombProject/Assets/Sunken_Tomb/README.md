@@ -31,7 +31,8 @@ Sunken Tomb also comes with a Void replication, exclusive to SotV's Simulacrum g
   * Underwater music muffling (true/false - disabled by default)
   * Modded enemy toggles
 * Modded enemies can appear if their respective mod is enabled
-  * [EnemiesReturns](https://thunderstore.io/package/Risky_Sleeps/EnemiesReturns/): Sand Crab, Colossus
+  * [EnemiesReturns](https://thunderstore.io/package/Risky_Sleeps/EnemiesReturns/): Sand Crab
+    * Colossus does not appear in the stage by default but can be enabled via config settings
   * [Clay Man](https://thunderstore.io/package/Moffein/Clay_Men/)
 
 # Bugs / Issues
