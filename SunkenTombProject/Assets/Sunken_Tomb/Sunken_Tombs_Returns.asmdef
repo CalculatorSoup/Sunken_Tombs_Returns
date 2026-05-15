@@ -43,7 +43,9 @@
         "MMHOOK_RoR2.dll",
         "AK.Wwise.Unity.API.dll",
         "ClayMen.dll",
-        "EnemiesReturns.dll"
+        "EnemiesReturns.dll",
+        "AK.Wwise.Unity.MonoBehaviour.dll",
+        "AK.Wwise.Unity.API.WwiseTypes.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],

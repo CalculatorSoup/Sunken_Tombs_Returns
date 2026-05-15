@@ -1,3 +1,8 @@
+# 1.1.1
+* The Monster Cages are now Sale Star compatible :)
+* Added ambient noise
+* Fixed a map node that didn't have a gate assigned, causing interactables to spawn in a wall sometimes
+
 # 1.1.0
 * Quick art pass:
   * Increased the poly counts of various meshes:

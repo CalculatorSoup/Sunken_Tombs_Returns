@@ -1,3 +1,4 @@
+using EnemiesReturns.Enemies.MechanicalSpider.Drone;
 using EntityStates;
 using RoR2;
 using RoR2.Networking;
@@ -5,8 +6,10 @@ using SunkenTombWorm.EntityStates.AcridCage;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
+using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.Networking;
+using SunkenTombWorm;
 
 public class AcridCage : NetworkBehaviour
 {
@@ -45,6 +48,30 @@ public class AcridCage : NetworkBehaviour
         }
         return Interactability.Available;
     }
+
+    ChestBehavior cb;
+    ScriptedCombatEncounter[] encounters;
+    //Starts the Acrid boss encounter. Also checks the ChestBehavior's drop count to spawn more Acrids if you used a Sale Star on the cage
+    [Server]
+    public async void SpawnAcrid()
+    {
+        cb = gameObject.GetComponent<ChestBehavior>();
+
+        Transform encounterHolder = gameObject.transform.GetChild(3);
+
+        encounters = encounterHolder.GetComponentsInChildren<ScriptedCombatEncounter>(); //scary
+
+        for (int i = 0; i < cb.dropCount; i++)
+        {
+            if (encounters[i])
+            {
+                encounters[i].BeginEncounter();
+            }
+            await Task.Delay(5000);
+        }
+
+    }
+
 
     [Server]
     public void Open()

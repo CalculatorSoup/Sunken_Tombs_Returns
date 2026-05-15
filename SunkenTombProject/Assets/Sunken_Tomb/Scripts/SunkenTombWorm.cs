@@ -45,7 +45,7 @@ namespace SunkenTombWorm
 
         public const string Name = "Sunken_Tombs_Returns";
 
-        public const string Version = "1.1.0";
+        public const string Version = "1.1.1";
 
         public const string GUID = Author + "." + Name;
 
@@ -130,6 +130,8 @@ namespace SunkenTombWorm
         {
             if (newScene.name == mapName)
             {
+                AmbienceSetup();
+
                 Transform geyserHolder = GameObject.Find("HOLDER: Jump Pads/Geysers").transform;
                 for (int i = 0; i < geyserHolder.childCount; i++)
                 {
@@ -140,6 +142,8 @@ namespace SunkenTombWorm
                 }
             } else if (newScene.name == simuName)
             {
+                AmbienceSetup();
+
                 Transform geyserHolder = GameObject.Find("HOLDER: Jump Pads/Geysers").transform;
                 for (int i = 0; i < geyserHolder.childCount; i++)
                 {
@@ -150,6 +154,23 @@ namespace SunkenTombWorm
                 }
             }
 
+        }
+        private void AmbienceSetup()
+        {
+            GameObject ambience = GameObject.Find("SceneInfo/Ambience");
+            AkBank bank = ambience.GetComponent<AkBank>();
+            AkAmbient[] ambientList = ambience.GetComponents<AkAmbient>();
+            AkAmbient ambient1 = ambientList[0];
+            AkAmbient ambient2 = ambientList[1];
+            if (bank)
+            {
+                WwiseBankReference arenaSound = Addressables.LoadAssetAsync<WwiseBankReference>("Wwise/E925DE37-300D-46A0-A4A1-B3CE1EE6B43F.asset").WaitForCompletion();
+                WwiseEventReference startArenaSound = Addressables.LoadAssetAsync<WwiseEventReference>("Wwise/26967A93-FF27-4D90-A29F-5564145B1EF5.asset").WaitForCompletion();
+                WwiseEventReference stopSound = Addressables.LoadAssetAsync<WwiseEventReference>("Wwise/6F2ADD1C-BD55-431F-A62F-80CCD5F9631D.asset").WaitForCompletion();
+                bank.data.WwiseObjectReference = arenaSound;
+                ambient1.data.WwiseObjectReference = startArenaSound;
+                ambient2.data.WwiseObjectReference = stopSound;
+            }
         }
 
         private void ConfigSetup()
