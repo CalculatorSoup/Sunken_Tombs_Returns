@@ -91,7 +91,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: ca9bb74af74402c4492565394724f464, type: 3}
+        m_Texture: {fileID: 2800000, guid: eca4f644431841b4daa4c38a472f3aeb, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -140,7 +140,7 @@ Material:
     - _Cull: 2
     - _Cutoff: 0.5
     - _DecalLayer: 1
-    - _Depth: 0.126
+    - _Depth: 0.647
     - _DetailNormalMapScale: 1
     - _DirtBias: 0
     - _DirtOn: 0
@@ -195,7 +195,7 @@ Material:
     - _SliceHeight: 5
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
-    - _SnowBias: -0.31
+    - _SnowBias: -0.32
     - _SnowOn: 0
     - _SnowSmoothness: 0
     - _SnowSpecularExponent: 1

@@ -90,7 +90,7 @@ Material:
     - _Depth: 100
     - _DetailNormalMapScale: 1
     - _DisplacementMode: 1
-    - _Distortion: 50
+    - _Distortion: 10
     - _DistortionQuality: 1
     - _DstBlend: 0
     - _EdgeFade: 0.5

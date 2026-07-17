@@ -28,7 +28,7 @@ MonoBehaviour:
   m_Name: AssetBundleDefinitions
   m_EditorClassIdentifier: 
   StagingPaths:
-  - <MSUBuildPath>
+  - <MSUBuildPathPlugins>
   assetBundles:
   - assetBundleName: SunkenTombsWormsAssets
     assets:
@@ -113,7 +113,7 @@ MonoBehaviour:
   Name: Sunken_Tombs_Returns
   Description: A 3D adaptation of Sunken Tombs from Risk of Rain 1, added to RoR2
     as a Stage 4 map. Also includes a Simulacrum variant!
-  Version: 1.1.1
+  Version: 1.2.0
   Dependencies:
   - {fileID: 11400000, guid: 2d4d09ec817c24698d35dc9bf0704fdc, type: 2}
   - {fileID: 11400000, guid: f0d760e9d4649854da675f3b2978b41b, type: 2}
@@ -139,7 +139,7 @@ MonoBehaviour:
   m_Name: AssemblyDefinitions
   m_EditorClassIdentifier: 
   StagingPaths:
-  - <MSUBuildPath>
+  - <MSUBuildPathPlugins>
   definitions:
   - {fileID: 5897886265953266890, guid: cf964abff13ef334780fabff148de05a, type: 3}
 --- !u!114 &4374576395453295959

@@ -45,7 +45,7 @@ namespace SunkenTombWorm
 
         public const string Name = "Sunken_Tombs_Returns";
 
-        public const string Version = "1.1.1";
+        public const string Version = "1.2.0";
 
         public const string GUID = Author + "." + Name;
 
@@ -128,7 +128,7 @@ namespace SunkenTombWorm
 
         private void SceneSetup(Scene newScene, LoadSceneMode loadSceneMode)
         {
-            if (newScene.name == mapName)
+            if (newScene.name == mapName || newScene.name == simuName)
             {
                 AmbienceSetup();
 
@@ -140,18 +140,12 @@ namespace SunkenTombWorm
                     geyserRing1.GetComponent<MeshRenderer>().material = SunkenTombContent.terrainMaterial;
                     geyserRing2.GetComponent<MeshRenderer>().material = SunkenTombContent.terrainMaterial;
                 }
-            } else if (newScene.name == simuName)
-            {
-                AmbienceSetup();
 
-                Transform geyserHolder = GameObject.Find("HOLDER: Jump Pads/Geysers").transform;
-                for (int i = 0; i < geyserHolder.childCount; i++)
-                {
-                    GameObject geyserRing1 = geyserHolder.GetChild(i).GetChild(0).GetChild(0).gameObject;
-                    GameObject geyserRing2 = geyserHolder.GetChild(i).GetChild(0).GetChild(1).gameObject;
-                    geyserRing1.GetComponent<MeshRenderer>().material = SunkenTombContent.itTerrainMaterial;
-                    geyserRing2.GetComponent<MeshRenderer>().material = SunkenTombContent.itTerrainMaterial;
-                }
+                Transform pillarGeyser = GameObject.Find("Central Pillar Geyser").transform;
+                GameObject pgRing1 = pillarGeyser.GetChild(0).GetChild(0).gameObject;
+                GameObject pgRing2 = pillarGeyser.GetChild(0).GetChild(1).gameObject;
+                pgRing1.GetComponent<MeshRenderer>().material = SunkenTombContent.terrainMaterial;
+                pgRing2.GetComponent<MeshRenderer>().material = SunkenTombContent.terrainMaterial;
             }
 
         }
