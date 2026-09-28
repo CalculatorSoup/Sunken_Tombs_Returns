@@ -13,7 +13,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Brick Ceiling
-    second: {fileID: 2100000, guid: 9eb4abefe8645a94cabe4be32a4d9a1d, type: 2}
+    second: {fileID: 2100000, guid: 1330d90a15750334fb34ec6325def18a, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule

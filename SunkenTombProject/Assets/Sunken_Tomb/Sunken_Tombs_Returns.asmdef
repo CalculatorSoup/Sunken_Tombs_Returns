@@ -45,7 +45,9 @@
         "ClayMen.dll",
         "EnemiesReturns.dll",
         "AK.Wwise.Unity.MonoBehaviour.dll",
-        "AK.Wwise.Unity.API.WwiseTypes.dll"
+        "AK.Wwise.Unity.API.WwiseTypes.dll",
+        "Starstorm2.dll",
+        "MSU.Runtime.dll"
     ],
     "autoReferenced": true,
     "defineConstraints": [],

@@ -8,7 +8,7 @@ ModelImporter:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
       name: Scaffolding
-    second: {fileID: 2100000, guid: d8df8967797b94a4eab39f669a26b8de, type: 2}
+    second: {fileID: 2100000, guid: aee5888a9798c324b8dabd72fae30b58, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

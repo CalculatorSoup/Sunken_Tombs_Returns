@@ -12,6 +12,7 @@ Material:
   m_ValidKeywords: []
   m_InvalidKeywords:
   - BINARYBLEND
+  - FORCE_SPEC
   - TRIPLANAR
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
@@ -91,7 +92,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: e960ad2cbe322b6489cb47ff9462c1df, type: 3}
+        m_Texture: {fileID: 2800000, guid: 86ab881a0c674a64ea5ad6c556fa04e9, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -99,7 +100,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _NormalTex:
-        m_Texture: {fileID: 2800000, guid: 5870aeac30bee72489c09d15de92eec8, type: 3}
+        m_Texture: {fileID: 2800000, guid: db10dd805f94ff4419337955ff51e8f6, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OcclusionMap:
@@ -119,11 +120,11 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SnowNormalTex:
-        m_Texture: {fileID: 2800000, guid: 5d85f1285ce6cda49b254314e197207b, type: 3}
+        m_Texture: {fileID: 2800000, guid: 5870aeac30bee72489c09d15de92eec8, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SnowTex:
-        m_Texture: {fileID: 2800000, guid: 45d81fc38c9c60d48b3df09eebc4e96a, type: 3}
+        m_Texture: {fileID: 2800000, guid: abfe53e054c83154f9cfe7fd510c754e, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _SplatmapTex:
@@ -140,7 +141,7 @@ Material:
     - _Cull: 2
     - _Cutoff: 0.5
     - _DecalLayer: 1
-    - _Depth: 0.088
+    - _Depth: 0.343
     - _DetailNormalMapScale: 1
     - _DirtBias: 0
     - _DirtOn: 0
@@ -166,7 +167,7 @@ Material:
     - _FlowSpeed: 1
     - _FlowTextureScaleFactor: 1
     - _FlowmapOn: 0
-    - _ForceSpecOn: 0
+    - _ForceSpecOn: 1
     - _FresnelBoost: 1
     - _FresnelPower: 1
     - _GlossMapScale: 1
@@ -195,14 +196,14 @@ Material:
     - _SliceHeight: 5
     - _Smoothness: 0
     - _SmoothnessTextureChannel: 0
-    - _SnowBias: -0.51
+    - _SnowBias: -0.5
     - _SnowOn: 0
     - _SnowSmoothness: 0
-    - _SnowSpecularExponent: 1
+    - _SnowSpecularExponent: 20
     - _SnowSpecularStrength: 0
-    - _SpecularExponent: 1
+    - _SpecularExponent: 9
     - _SpecularHighlights: 1
-    - _SpecularStrength: 0
+    - _SpecularStrength: 0.01
     - _SplatmapOn: 0
     - _SplatmapTileScale: 1
     - _SrcBlend: 1
@@ -212,7 +213,7 @@ Material:
     - _VertexColorOn: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.69803923, g: 0.5647059, b: 0.62293696, a: 1}
+    - _Color: {r: 0.69803923, g: 0.5647059, b: 0.62352943, a: 1}
     - _EmColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlashColor: {r: 0, g: 0, b: 0, a: 1}

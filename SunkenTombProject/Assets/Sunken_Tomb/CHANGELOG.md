@@ -1,3 +1,47 @@
+# 1.3.0
+* **Final(?) art pass:**
+  * Retextured all building textures (brick, trims, tiles, and cobble) and edited textures for foliage and the Monster Cage. The building textures especially should no longer look like I drew them with crayons. lol
+  * Edited the stage's fog: Underwater sections now have noticeable bluish fog. Above water, fog is brighter and extends further into the skybox to make background elements stand out a bit better. Overall the map's color palette should be closer to its appearance in Risk of Rain Returns
+    * The map's sun intensity was lowered (3 -> 2.5) to compensate for the brighter fog, but the stage is overall a scosche brighter than last version
+  * Remodeled the spear-wielding Lemurian statues. They no longer look like PS2 models, but humanoid models are not my specialty, so apologies if they're still a bit crusty,,
+  * Added an inset area to the L-shaped building on the surface
+  * Slightly reduced bloom intensity
+  * Slightly improved the water caustics' visuals
+* **Monster Cage changes:**
+  * Interactable:
+    * Increased the red light's radius, which should make it easier to spot from afar
+    * Revised interact prompt
+  * Legendary Reward:
+    * Extra Legendary drops from Sale Stars no longer scale with player count. No fun allowed. Sorry (but I also added a config option to revert this change. Fun allowed)
+  * Boss:
+    * Acrid now prioritizes players
+    * Acrid should no longer try to leap away from you
+    * Increased base damage (15 -> 30) and scaling damage (3 -> 6)
+    * Removed passive health regen
+      * Overall, Acrid should be more aggressive and should now focus on players over drones and other allies. I considered lowering its health but wasn't sure if that was actually necessary, so I did not do that. Hopefully it's a bit more engaging to fight now. Feedback on this would be appreciated!!
+* **Other changes:**
+  * Revised the stage's lore - specifically, the section mentioning the Artifact of Origin
+  * Rotated a geyser near the center of the map to make it clearer where it's supposed to take you
+  * Starstorm 2: Added Clay Mongers and Security Chests to the stage!
+  * Added Void Devastators
+    * Crab
+  * Removed Stone Titans
+    * I only included these because I was trying to emulate the original stage's monster pool as closely as possible, but there's already 3 other base game bosses in the stage and there's already another stone enemy in the stage, so like, they really did not need to be here I think
+* **Fixes:**
+  * Fixed a bunch of map nodes not connecting (particularly ones activated when the central peninsula and central rock pillar variations are disabled).  Monsters and interactables should actually be able to spawn/navigate normally in those areas now
+  * Patched up a couple tiny holes in the map geometry
+  * Fixed blue vertical lines appearing when viewing above-water grass patches from an angle
+  * Monster Cage: Fixed bonus Sale Star legendary drops spawning in a different position than the standard drop position
+
+# 1.2.1
+* **Fixes:**
+  * Hopefully fixed an issue where interactables/characters would occasionally spawn on walls, introduced in the last update
+  * Fixed an issue where the Simulacrum version of the stage was missing a few boulders, also introduced in the last update,,,
+  * Fixed a bunch of air nodes, mostly in/around the cave, having an assigned gate when they shouldn't have
+* **Changes:**
+  * The cave's upper layer platforms are no longer a random variation and will instead always appear, which should fix the issue where map nodes would simply never work there for reasons that I still don't entirely understand
+  * Added a couple faraway rock arches to the map's out-of-bounds terrain
+
 # 1.2.0
 * **Layout changes:**
   * The large L-shaped building's roof is now an accessible area in the map. Various launch pads were added to connect it to other areas

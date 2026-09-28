@@ -11,6 +11,7 @@ Material:
   m_Shader: {fileID: 4800000, guid: 7e718f9a771798b47bc22ddc8fe70637, type: 3}
   m_ValidKeywords: []
   m_InvalidKeywords:
+  - _DEPTHFOG_ON
   - _DISPLACEMENTMODE_WAVE
   - _DISPLACEMENT_ON
   - _DISTORTIONQUALITY_LOW
@@ -87,17 +88,17 @@ Material:
     - _BumpScale: 1
     - _BumpStrength: 1
     - _Cutoff: 0.5
-    - _Depth: 100
+    - _Depth: 50
     - _DetailNormalMapScale: 1
     - _DisplacementMode: 1
     - _Distortion: 10
     - _DistortionQuality: 1
     - _DstBlend: 0
     - _EdgeFade: 0.5
-    - _EnableFog: 0
+    - _EnableFog: 1
     - _EnableLargeBump: 0
     - _FOAM: 1
-    - _FoamSize: 0.1
+    - _FoamSize: 0.25
     - _Frequency: 0.97
     - _GlossMapScale: 1
     - _Glossiness: 0.5
@@ -121,11 +122,11 @@ Material:
     - _WorldSpace: 1
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0, g: 0.92156863, b: 1, a: 1}
+    - _Color: {r: 0.5896226, g: 0.96781355, b: 1, a: 1}
     - _CubeColor: {r: 0, g: 0, b: 0, a: 1}
-    - _DepthColor: {r: 0.3018868, g: 0.3018868, b: 0.3018868, a: 1}
+    - _DepthColor: {r: 0.05882353, g: 0.09019608, b: 0.22745098, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _FoamColor: {r: 0.29276434, g: 0.35485718, b: 0.4056604, a: 1}
+    - _FoamColor: {r: 0.19486472, g: 0.23703623, b: 0.2735849, a: 1}
     - _SpecColor: {r: 0.52985936, g: 0.5905552, b: 0.5943396, a: 1}
     - _Speeds: {r: -0.3, g: 0.3, b: 0.4, a: -0.4}
     - _SpeedsLarge: {r: -0.1, g: 0.1, b: 0.1, a: -0.1}

@@ -195,6 +195,24 @@
       "dependencies": {},
       "hash": "ae09ddcf060e5a8424dbd557acef805fbb150f38"
     },
+    "kingenderbrine-lobbyskinsfix": {
+      "version": "file:LobbySkinsFix",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "kingenderbrine-scrollablelobbyui": {
+      "version": "file:ScrollableLobbyUI",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "lordvgames-gildedchunkspamfix": {
+      "version": "file:GildedChunkSpamFix",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "mmhook-assemblies": {
       "version": "file:mmhook-assemblies",
       "depth": 0,
@@ -203,6 +221,12 @@
     },
     "moffein-clay_men": {
       "version": "file:Clay_Men",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "nebby-loadingscreenspritefix": {
+      "version": "file:LoadingScreenSpriteFix",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
@@ -225,6 +249,12 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "riskofthunder-burstsofrain": {
+      "version": "file:BurstsOfRain",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "riskofthunder-fixplugintypesserialization": {
       "version": "file:FixPluginTypesSerialization",
       "depth": 0,
@@ -239,6 +269,18 @@
     },
     "riskofthunder-r2api_addressables": {
       "version": "file:R2API_Addressables",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "riskofthunder-r2api_artifactcode": {
+      "version": "file:R2API_ArtifactCode",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "riskofthunder-r2api_colors": {
+      "version": "file:R2API_Colors",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
@@ -267,14 +309,32 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "riskofthunder-r2api_difficulty": {
+      "version": "file:R2API_Difficulty",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "riskofthunder-r2api_director": {
       "version": "file:R2API_Director",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
     },
+    "riskofthunder-r2api_dot": {
+      "version": "file:R2API_Dot",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "riskofthunder-r2api_elites": {
       "version": "file:R2API_Elites",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "riskofthunder-r2api_execute": {
+      "version": "file:R2API_Execute",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
@@ -309,8 +369,20 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "riskofthunder-r2api_rulebook": {
+      "version": "file:R2API_Rulebook",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "riskofthunder-r2api_sceneasset": {
       "version": "file:R2API_SceneAsset",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "riskofthunder-r2api_skins": {
+      "version": "file:R2API_Skins",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
@@ -323,6 +395,12 @@
     },
     "riskofthunder-r2api_stages": {
       "version": "file:R2API_Stages",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "riskofthunder-r2api_stringserializerextensions": {
+      "version": "file:R2API_StringSerializerExtensions",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}
@@ -361,6 +439,12 @@
       "source": "embedded",
       "dependencies": {}
     },
+    "rune580-risk_of_options": {
+      "version": "file:Risk_Of_Options",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
     "score-miscfixes": {
       "version": "file:MiscFixes",
       "depth": 0,
@@ -369,6 +453,18 @@
     },
     "smooth_salad-shaderswapper": {
       "version": "file:ShaderSwapper",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "teammoonstorm-moonstormsharedutils": {
+      "version": "file:MoonstormSharedUtils",
+      "depth": 0,
+      "source": "embedded",
+      "dependencies": {}
+    },
+    "teammoonstorm-starstorm2": {
+      "version": "file:Starstorm2",
       "depth": 0,
       "source": "embedded",
       "dependencies": {}

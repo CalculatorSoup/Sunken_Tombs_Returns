@@ -39,6 +39,8 @@ namespace SunkenTombWorm.Content
         internal static Material mainBazaarSeer;
         internal static Material terrainMaterial;
         internal static CharacterSpawnCard stAcridCard;
+        internal static GameObject cagePrefab;
+
 
         //Simulacrum
         internal static SceneDef simuSceneDef;
@@ -46,8 +48,8 @@ namespace SunkenTombWorm.Content
         internal static Material simuBazaarSeer;
         internal static Material itTerrainMaterial;
 
-
         public static List<Material> SwappedMaterials = new List<Material>();
+
 
         internal static IEnumerator LoadAssetBundlesAsync(AssetBundle scenesAssetBundle, AssetBundle assetsAssetBundle, IProgress<float> progress, ContentPack contentPack)
         {
@@ -68,6 +70,12 @@ namespace SunkenTombWorm.Content
             yield return LoadAllAssetsAsync(assetsAssetBundle, progress, (Action<CharacterSpawnCard[]>)((assets) =>
             {
                 stAcridCard = assets.First(a => a.name == "cscSTAcrid");
+            }));
+
+
+            yield return LoadAllAssetsAsync(assetsAssetBundle, progress, (Action<GameObject[]>)((assets) =>
+            {
+                cagePrefab = assets.First(a => a.name == "ST Acrid Cage");
             }));
 
             yield return LoadAllAssetsAsync(_assetsAssetBundle, progress, (Action<Sprite[]>)((assets) =>
@@ -112,41 +120,20 @@ namespace SunkenTombWorm.Content
             //simuSceneDef.bossTrack = mainSceneDef.bossTrack;
             ContentProvider.SetupMusic();
 
-            GameObject acridBody = Addressables.LoadAssetAsync<GameObject>("RoR2/Base/Croco/CrocoMonsterMaster.prefab").WaitForCompletion();
 
+            //set up character spawn card. NUCLEAR FART, !!!
             ItemDef umbraItem = Addressables.LoadAssetAsync<ItemDef>("RoR2/Base/InvadingDoppelganger/InvadingDoppelganger.asset").WaitForCompletion();
-            ItemDef lensmakersItem = Addressables.LoadAssetAsync<ItemDef>("RoR2/Base/CritGlasses/CritGlasses.asset").WaitForCompletion();
-            ItemDef prinstinctsItem = Addressables.LoadAssetAsync<ItemDef>("RoR2/Base/AttackSpeedOnCrit/AttackSpeedOnCrit.asset").WaitForCompletion();
-            ItemDef burgerItem = Addressables.LoadAssetAsync<ItemDef>("RoR2/Base/UtilitySkillMagazine/UtilitySkillMagazine.asset").WaitForCompletion();
-            
             ItemCountPair umbraItemPair = new ItemCountPair
             {
                 itemDef = umbraItem,
                 count = 1
             };
-            ItemCountPair lensmakersItemPair = new ItemCountPair
-            {
-                itemDef = lensmakersItem,
-                count = 10
-            };
-            ItemCountPair prinstinctsItemPair = new ItemCountPair
-            {
-                itemDef = prinstinctsItem,
-                count = 1
-            };
-            ItemCountPair burgerItemPair = new ItemCountPair
-            {
-                itemDef = burgerItem,
-                count = 1
-            };
 
-            stAcridCard.prefab = acridBody;
-            stAcridCard.itemsToGrant[0] = (umbraItemPair);
-            //stAcridCard.itemsToGrant[1] = (lensmakersItemPair);
-            //stAcridCard.itemsToGrant[2] = (prinstinctsItemPair);
-            //stAcridCard.itemsToGrant[3] = (burgerItemPair);
+            SunkenTombContent.stAcridCard.prefab = AcridPrefab.newMaster;
+            SunkenTombContent.stAcridCard.itemsToGrant[0] = (umbraItemPair);
 
 
+            // Register scenes
             if (SunkenTomb.enableRegular.Value)
             {
                 R2API.StageRegistration.RegisterSceneDefToNormalProgression(mainSceneDef);

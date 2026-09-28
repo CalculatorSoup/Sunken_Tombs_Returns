@@ -28,6 +28,7 @@ using UnityEngine.ResourceManagement.ResourceProviders;
 using UnityEngine.SceneManagement;
 using RoR2.Navigation;
 using SunkenTombWorm.EntityStates.AcridCage;
+using IL.RoR2.CharacterAI;
 //Copied from Broadcast Perch copied from a private Unity project I use for testing maps copied from Ancient Observatory copied from Wetland Downpour copied from Fogbound Lagoon copied from Nuketown
 
 
@@ -45,7 +46,7 @@ namespace SunkenTombWorm
 
         public const string Name = "Sunken_Tombs_Returns";
 
-        public const string Version = "1.2.0";
+        public const string Version = "1.3.0";
 
         public const string GUID = Author + "." + Name;
 
@@ -55,14 +56,19 @@ namespace SunkenTombWorm
         public static ConfigEntry<bool> enableSimulacrum;
         public static ConfigEntry<bool> stage1Simulacrum;
         public static ConfigEntry<bool> waterMuffle;
+        public static ConfigEntry<bool> scaleStar;
 
         public static ConfigEntry<bool> toggleSandCrab;
         public static ConfigEntry<bool> toggleColossus;
+
+        public static ConfigEntry<bool> toggleMimic;
+        public static ConfigEntry<bool> toggleMonger;
 
         public static ConfigEntry<bool> toggleClayMen;
 
         public const string mapName = "sunkentombs_wormsworms";
         public const string simuName = "itsunkentombs_wormsworms";
+        private bool saleStarBuffed = false;
 
         private void Awake()
         {
@@ -80,6 +86,8 @@ namespace SunkenTombWorm
 
             AddEntityStates();
 
+            AcridPrefab.Start();
+
             SceneManager.sceneLoaded += SceneSetup;
 
             RoR2.RoR2Application.onLoadFinished += AddModdedEnemies;
@@ -91,6 +99,10 @@ namespace SunkenTombWorm
             if (IsEnemiesReturns.enabled)
             {
                 EnemiesReturnsCompat.AddEnemies(); //Sand Crab, Colossus
+            }
+            if (IsStarstorm2.enabled)
+            {
+                Starstorm2Compat.AddEnemies(); //Mimic, Clay Monger
             }
             if (IsClayMen.enabled)
             {
@@ -132,6 +144,7 @@ namespace SunkenTombWorm
             {
                 AmbienceSetup();
 
+                // change texture on geyser rocks
                 Transform geyserHolder = GameObject.Find("HOLDER: Jump Pads/Geysers").transform;
                 for (int i = 0; i < geyserHolder.childCount; i++)
                 {
@@ -146,9 +159,37 @@ namespace SunkenTombWorm
                 GameObject pgRing2 = pillarGeyser.GetChild(0).GetChild(1).gameObject;
                 pgRing1.GetComponent<MeshRenderer>().material = SunkenTombContent.terrainMaterial;
                 pgRing2.GetComponent<MeshRenderer>().material = SunkenTombContent.terrainMaterial;
+
+                // increase cage light's radius and what not
+                Transform cageLight = GameObject.Find("SM_Light3(Clone)/Light/Point Light").transform;
+                Transform[] cageLights =
+                {
+                    GameObject.Find("Temple Cage/Red Light/SM_Light3(Clone)/Light/Point Light").transform,
+                    GameObject.Find("Surface Cage/Red Light/SM_Light3(Clone)/Light/Point Light").transform,
+                    GameObject.Find("Surface Cage 2/Red Light/SM_Light3(Clone)/Light/Point Light").transform,
+                    GameObject.Find("Balcony Cage/Red Light/SM_Light3(Clone)/Light/Point Light").transform,
+                    GameObject.Find("Cave Cage/Red Light/SM_Light3(Clone)/Light/Point Light").transform,
+                };
+
+                bool foundLight = false;
+
+                foreach (Transform light in cageLights)
+                {
+                    if (light)
+                    {
+                        light.GetComponent<Light>().range = 15;
+                        foundLight = true;
+                    }
+                }
+                //no light,,,,,,
+                if (foundLight == false)
+                {
+                    Log.Debug("Could not locate Monster Cage point light. Now it will be slightly dimmer than intended. It's just awful");
+                }
             }
 
         }
+
         private void AmbienceSetup()
         {
             GameObject ambience = GameObject.Find("SceneInfo/Ambience");
@@ -189,6 +230,11 @@ namespace SunkenTombWorm
                                        "Underwater Music Muffling",
                                        false,
                                        "If true, music will be muffled while underwater in Sunken Tombs.");
+            scaleStar =
+                base.Config.Bind<bool>("00 - Stages",
+                                       "Monster Cage: Scaled Sale Star Drops",
+                                       false,
+                                       "If true, bonus Monster Cage legendary drops granted by Sale Star will scale with player count (by default, only the initial item drop scales).");
 
             toggleSandCrab =
                 base.Config.Bind<bool>("01 - Monsters: EnemiesReturns",
@@ -200,6 +246,16 @@ namespace SunkenTombWorm
                                        "Enable Colossus",
                                        false,
                                        "If true, Collossi will appear in Sunken Tombs.");
+             toggleMimic =
+                base.Config.Bind<bool>("02 - Monsters: Starstorm 2",
+                                        "Enable Security Chest",
+                                        true,
+                                        "If true, Security Chests will appear in Sunken Tombs.");
+            toggleMonger =
+                base.Config.Bind<bool>("02 - Monsters: Starstorm 2",
+                                        "Enable Clay Monger",
+                                        true,
+                                        "If true, Clay Mongers will appear in Sunken Tombs.");
             toggleClayMen =
                 base.Config.Bind<bool>("03 - Monsters: Misc.",
                                        "Enable Clay Man",

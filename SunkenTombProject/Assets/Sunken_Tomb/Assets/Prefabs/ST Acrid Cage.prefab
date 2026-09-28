@@ -173,7 +173,7 @@ MonoBehaviour:
   bossDropChance: 0
   dropPosition: {fileID: 7574104379541132182}
   dropTable: {fileID: 0}
-  scaleRewardsByPlayerCount: 1
+  scaleRewardsByPlayerCount: 0
   shouldDisplayHealthBarOnHud: 1
   thresholdController: {fileID: 0}
   shouldCreateObjectiveEntry: 1
@@ -579,7 +579,7 @@ MonoBehaviour:
   bossDropChance: 0
   dropPosition: {fileID: 5242381708196659729}
   dropTable: {fileID: 0}
-  scaleRewardsByPlayerCount: 1
+  scaleRewardsByPlayerCount: 0
   shouldDisplayHealthBarOnHud: 1
   thresholdController: {fileID: 0}
   shouldCreateObjectiveEntry: 1
@@ -757,6 +757,8 @@ GameObject:
   - component: {fileID: 8111330230931601625}
   - component: {fileID: 1275423718378208929}
   - component: {fileID: 4835942206651856266}
+  - component: {fileID: 3030202426869588506}
+  - component: {fileID: 486877919860855179}
   m_Layer: 0
   m_Name: ST Acrid Cage
   m_TagString: Untagged
@@ -780,8 +782,6 @@ Transform:
   - {fileID: 7179285863194520081}
   - {fileID: 5784323751245183524}
   - {fileID: 5795109622478837286}
-  - {fileID: 8450004612677223656}
-  - {fileID: 7364740624248468458}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1065,6 +1065,8 @@ MonoBehaviour:
     transform: {fileID: 8694308645950013583}
   - name: Door
     transform: {fileID: 7179285863194520081}
+  - name: Encounters
+    transform: {fileID: 5795109622478837286}
 --- !u!114 &4835942206651856266
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1102,6 +1104,45 @@ MonoBehaviour:
   isCommandChest: 0
   isChestReset: 0
   ppc: {fileID: 0}
+--- !u!114 &3030202426869588506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5884749885283050462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e93200e0401cb74fb01ade41af54039, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &486877919860855179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5884749885283050462}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1630511094, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  action:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 3030202426869588506}
+        m_TargetAssemblyTypeName: SunkenTombWorm.STSaleStarBuff, Sunken_Tombs_Returns
+        m_MethodName: ReverseNerfStar
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6186387537288298937
 GameObject:
   m_ObjectHideFlags: 0
@@ -1244,7 +1285,7 @@ MonoBehaviour:
   bossDropChance: 0
   dropPosition: {fileID: 6500522527202959812}
   dropTable: {fileID: 0}
-  scaleRewardsByPlayerCount: 1
+  scaleRewardsByPlayerCount: 0
   shouldDisplayHealthBarOnHud: 1
   thresholdController: {fileID: 0}
   shouldCreateObjectiveEntry: 1
@@ -1442,112 +1483,6 @@ Transform:
   m_Father: {fileID: 4751334624199569964}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &8800184110533660667
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 7364740624248468458}
-  - component: {fileID: 8852054595219763198}
-  m_Layer: 0
-  m_Name: che
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &7364740624248468458
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8800184110533660667}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.7531639, y: -2.8107255, z: 13.283619}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5578905777737254695}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &8852054595219763198
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8800184110533660667}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b585ce31f93d58489807db4907df51d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  address: RoR2/Base/Chest1/Chest1.prefab
-  setPositionAndRotationToZero: 1
-  setPositionToZero: 1
-  setRotationToZero: 1
-  useLocalPositionAndRotation: 1
-  overrideLocalScale: 0
-  newLocalScale: {x: 1, y: 1, z: 1}
-  refreshInEditor: 1
-  hasNetworkIdentity: 1
---- !u!1 &8986429163033151583
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 8450004612677223656}
-  - component: {fileID: 93309360173574059}
-  m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 0
---- !u!4 &8450004612677223656
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8986429163033151583}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -7.680128, y: -0.6186022, z: 3.5215666}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 5578905777737254695}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &93309360173574059
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8986429163033151583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b585ce31f93d58489807db4907df51d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  address: RoR2/Base/Barrel1/Barrel1.prefab
-  setPositionAndRotationToZero: 1
-  setPositionToZero: 1
-  setRotationToZero: 1
-  useLocalPositionAndRotation: 1
-  overrideLocalScale: 0
-  newLocalScale: {x: 1, y: 1, z: 1}
-  refreshInEditor: 1
-  hasNetworkIdentity: 1
 --- !u!1 &9140657144559984494
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,7 +1625,7 @@ MonoBehaviour:
   bossDropChance: 0
   dropPosition: {fileID: 9180789849170192019}
   dropTable: {fileID: 0}
-  scaleRewardsByPlayerCount: 1
+  scaleRewardsByPlayerCount: 0
   shouldDisplayHealthBarOnHud: 1
   thresholdController: {fileID: 0}
   shouldCreateObjectiveEntry: 1
