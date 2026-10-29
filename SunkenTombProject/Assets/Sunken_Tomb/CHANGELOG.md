@@ -1,3 +1,15 @@
+# 1.4.0
+* Added support for Hallowed Concepts!
+  * Added DLC4 interactables. No enemies though
+  * Added spawn points for Trial Gongs and Wakes
+  * Added a Reincarnation zone (sends you to the secret boss)
+* Updated the cobblestone material to use the new Standard Triplanar Splat shader (basically it got a light coating of sand on it now)
+  * The diamond tiles also use this shader now, but the difference in appearance is a bit more subtle there
+* Defeating Acrid now contributes to Karma
+  * Currently it just uses the AWU trigger instead of a unique one. Hopefully that doesn't cause any unforeseen issues,,
+  * Sale Star clones don't contribute to Karma
+* Fixed Starstorm 2 enemies not appearing
+
 # 1.3.0
 * **Final(?) art pass:**
   * Retextured all building textures (brick, trims, tiles, and cobble) and edited textures for foliage and the Monster Cage. The building textures especially should no longer look like I drew them with crayons. lol

@@ -8,9 +8,10 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: matITSTCobble
-  m_Shader: {fileID: 4800000, guid: 892febee97f6cdf439912ad371711811, type: 3}
+  m_Shader: {fileID: 4800000, guid: e601035efde7e3046a2169920a727fb4, type: 3}
   m_ValidKeywords: []
-  m_InvalidKeywords: []
+  m_InvalidKeywords:
+  - USE_CHANNELS
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 1
   m_DoubleSidedGI: 0
@@ -25,6 +26,10 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _BlueChannelTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BlueSplatTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
@@ -80,6 +85,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _GreenSplatTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _HeightTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
         m_Texture: {fileID: 2800000, guid: e743077bc72288347b759e482b58be10, type: 3}
         m_Scale: {x: 1, y: 1}
@@ -104,6 +117,10 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _RedSplatTex:
+        m_Texture: {fileID: 2800000, guid: 103958afd6a0a6b4cbd21be0f7ca115c, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _SliceAlphaTex:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -112,11 +129,18 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _secSplatTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
     - _BlueChannelBias: 0
     - _BlueChannelSmoothness: 0
+    - _BlueChannelSpecularExponent: 0
+    - _BlueChannelSpecularStrength: 0
     - _BumpScale: 1
+    - _ChannelOn: 1
     - _ColorsOn: 0
     - _Cull: 2
     - _Cutoff: 0.5
@@ -126,6 +150,7 @@ Material:
     - _DitherOn: 0
     - _DoubleColorsOn: 0
     - _DstBlend: 0
+    - _EMON: 0
     - _EliteBrightnessMax: 1
     - _EliteBrightnessMin: 0
     - _EliteIndex: 0
@@ -150,11 +175,19 @@ Material:
     - _GlossyReflections: 1
     - _GreenChannelBias: 0
     - _GreenChannelSmoothness: 0
+    - _GreenChannelSpecularExponent: 0
+    - _GreenChannelSpecularStrength: 0
+    - _HeightCap: 0
+    - _HeightOn: 0
+    - _HeigtIntensity: 0
     - _LimbPrimeMask: 1
     - _LimbRemovalOn: 0
+    - _MaskOn: 0
     - _Metallic: 0
+    - _MixColorsOn: 0
     - _Mode: 0
-    - _NormalStrength: 2
+    - _NormalStrength: 4
+    - _NormalsTextureFactor: 1
     - _OcclusionStrength: 1
     - _Parallax: 0.02
     - _PrintBias: 0
@@ -163,6 +196,14 @@ Material:
     - _PrintEmissionToAlbedoLerp: 0
     - _PrintOn: 0
     - _RampInfo: 1
+    - _RandomSplatIntensity: 0.2
+    - _RedChannelBias: 0
+    - _RedChannelSmoothness: 0
+    - _RedChannelSpecularExponent: 0
+    - _RedChannelSpecularStrength: 0
+    - _SPLATTOP: 0
+    - _SecSplatIntensity: 0
+    - _SecSplatTextureFactor: 1
     - _SecondarySmoothness: 0
     - _SliceAlphaDepth: 0.1
     - _SliceBandHeight: 1
@@ -172,14 +213,24 @@ Material:
     - _SpecularExponent: 1
     - _SpecularHighlights: 1
     - _SpecularStrength: 0
+    - _SplatInfo: 0
+    - _SplatTextureFactor: 3
     - _SplatmapOn: 0
     - _SplatmapTileScale: 1
     - _SrcBlend: 1
+    - _TextureFactor: 1
     - _UVSec: 0
+    - _UseSecSplat: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.6784314, g: 0.54901963, b: 0.59718966, a: 1}
+    - _BlueTint: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 0.7137255, g: 0.7137255, b: 0.7137255, a: 1}
     - _EmColor: {r: 0, g: 0, b: 0, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FlashColor: {r: 0, g: 0, b: 0, a: 1}
+    - _GreenTint: {r: 1, g: 1, b: 1, a: 1}
+    - _RandomSplatColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RedTint: {r: 1, g: 1, b: 1, a: 1}
+    - _SecSplatColor: {r: 1, g: 1, b: 1, a: 1}
+    - _overallColor: {r: 1, g: 1, b: 1, a: 1}
   m_BuildTextureStacks: []

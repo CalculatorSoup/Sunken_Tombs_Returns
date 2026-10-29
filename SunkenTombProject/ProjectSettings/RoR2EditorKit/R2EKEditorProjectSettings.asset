@@ -56,5 +56,24 @@ MonoBehaviour:
         PublicKeyToken=b77a5c561934e089
       _serializedValue: 
       _defaultSerializedValue: 
+    - _settingName: isInspectorEnabled
+      _settingID: 1392571204
+      _valueTypeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      _serializedValue: 0
+      _defaultSerializedValue: 
+    _settingType: 0
+    _settingProviderName: R2EKEditorProjectSettings
+  - _typeName: EntityStateMachineInspector
+    _editorTypeQualifiedName: RoR2.Editor.Inspectors.EntityStateMachineInspector,
+      RoR2.Editor.Scripts, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    _editorTypeQualifiedHash: -186733506
+    _serializedSettings:
+    - _settingName: isInspectorEnabled
+      _settingID: 1392571204
+      _valueTypeQualifiedName: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+        PublicKeyToken=b77a5c561934e089
+      _serializedValue: 0
+      _defaultSerializedValue: 
     _settingType: 0
     _settingProviderName: R2EKEditorProjectSettings

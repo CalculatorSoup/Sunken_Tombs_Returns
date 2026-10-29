@@ -158,6 +158,10 @@ MonoBehaviour:
     cullChance: 0
   spawnOnStart: 0
   grantUniqueBonusScaling: 1
+  maximumDistance: 1000
+  expRewardCoefficient: 0.2
+  goldRewardCoefficient: 1
+  applyGoldAndExp: 0
 --- !u!114 &6627410225847656721
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +181,9 @@ MonoBehaviour:
   shouldDisplayHealthBarOnHud: 1
   thresholdController: {fileID: 0}
   shouldCreateObjectiveEntry: 1
+  barrageOnBossDelayOverride: -1
+  shouldGenerateSpecialNameForHealthBar: 0
+  specialNameForHealthBar: 
   forceTier3Reward: 1
   currentPriority: 0
   bodiesOfCurrentPriority: 0
@@ -564,6 +571,10 @@ MonoBehaviour:
     cullChance: 0
   spawnOnStart: 0
   grantUniqueBonusScaling: 1
+  maximumDistance: 1000
+  expRewardCoefficient: 0.2
+  goldRewardCoefficient: 1
+  applyGoldAndExp: 0
 --- !u!114 &8905009458278075104
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -583,6 +594,9 @@ MonoBehaviour:
   shouldDisplayHealthBarOnHud: 1
   thresholdController: {fileID: 0}
   shouldCreateObjectiveEntry: 1
+  barrageOnBossDelayOverride: -1
+  shouldGenerateSpecialNameForHealthBar: 0
+  specialNameForHealthBar: 
   forceTier3Reward: 1
   currentPriority: 0
   bodiesOfCurrentPriority: 0
@@ -600,6 +614,7 @@ GameObject:
   - component: {fileID: 2413403355725086372}
   - component: {fileID: 3727758604736820164}
   - component: {fileID: 652150359242664948}
+  - component: {fileID: 3430887881924197418}
   m_Layer: 11
   m_Name: Boss Encounter
   m_TagString: Untagged
@@ -676,7 +691,19 @@ MonoBehaviour:
       m_Calls: []
   onDefeatedServerLogicEvent:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 3430887881924197418}
+        m_TargetAssemblyTypeName: RoR2.EventFunctions, RoR2
+        m_MethodName: SerializedKarmaEventTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: SuperRoboBallBossBeaten
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2413403355725086372
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -713,6 +740,10 @@ MonoBehaviour:
     cullChance: 0
   spawnOnStart: 0
   grantUniqueBonusScaling: 1
+  maximumDistance: 1000
+  expRewardCoefficient: 0.2
+  goldRewardCoefficient: 1
+  applyGoldAndExp: 0
 --- !u!114 &652150359242664948
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -732,9 +763,24 @@ MonoBehaviour:
   shouldDisplayHealthBarOnHud: 1
   thresholdController: {fileID: 0}
   shouldCreateObjectiveEntry: 1
+  barrageOnBossDelayOverride: -1
+  shouldGenerateSpecialNameForHealthBar: 0
+  specialNameForHealthBar: 
   forceTier3Reward: 1
   currentPriority: 0
   bodiesOfCurrentPriority: 0
+--- !u!114 &3430887881924197418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5774054421705200847}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 733712478, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5884749885283050462
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,12 +876,12 @@ MonoBehaviour:
   m_Script: {fileID: -1699741063, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  forcedAnimatorAtStart: {fileID: 0}
   _modelTransform: {fileID: 8873038005227252281}
   modelVisibility: {fileID: 0}
   modelBaseTransform: {fileID: 0}
-  modelScaleCompensation: 7
-  initialScale: {x: 0, y: 0, z: 0}
   autoUpdateModelTransform: 1
+  compensateForInitialScale: 1
   dontDetatchFromParent: 0
   noCorpse: 0
   dontReleaseModelOnDeath: 0
@@ -858,7 +904,9 @@ MonoBehaviour:
   m_Script: {fileID: 871971028, guid: 951ce57ad999ac1f040a4dceb5f8b763, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  useForPingHighlight: 0
   targetRenderer: {fileID: 3212424414192986230}
+  targetRendererList: []
   strength: 1
   highlightColor: 0
   CustomColor: {r: 1, g: 0, b: 1, a: 1}
@@ -896,6 +944,12 @@ MonoBehaviour:
   requiredExpansion: {fileID: 0}
   lastActivator: {fileID: 0}
   lockGameObject: {fileID: 0}
+  onSetAvailable:
+    m_PersistentCalls:
+      m_Calls: []
+  onSetUnavailable:
+    m_PersistentCalls:
+      m_Calls: []
   onPurchase:
     m_PersistentCalls:
       m_Calls:
@@ -1091,6 +1145,7 @@ MonoBehaviour:
   closingState:
     _typeName: SunkenTombWorm.EntityStates.AcridCage.Closed, Sunken_Tombs_Returns,
       Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+  storageType: 1
   tier1Chance: 0.8
   tier2Chance: 0.2
   tier3Chance: 0.01
@@ -1102,6 +1157,7 @@ MonoBehaviour:
       m_Calls: []
   dropCount: 0
   isCommandChest: 0
+  isChestOpened: 0
   isChestReset: 0
   ppc: {fileID: 0}
 --- !u!114 &3030202426869588506
@@ -1270,6 +1326,10 @@ MonoBehaviour:
     cullChance: 0
   spawnOnStart: 0
   grantUniqueBonusScaling: 1
+  maximumDistance: 1000
+  expRewardCoefficient: 0.2
+  goldRewardCoefficient: 1
+  applyGoldAndExp: 0
 --- !u!114 &8339327456237356005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1289,6 +1349,9 @@ MonoBehaviour:
   shouldDisplayHealthBarOnHud: 1
   thresholdController: {fileID: 0}
   shouldCreateObjectiveEntry: 1
+  barrageOnBossDelayOverride: -1
+  shouldGenerateSpecialNameForHealthBar: 0
+  specialNameForHealthBar: 
   forceTier3Reward: 1
   currentPriority: 0
   bodiesOfCurrentPriority: 0
@@ -1610,6 +1673,10 @@ MonoBehaviour:
     cullChance: 0
   spawnOnStart: 0
   grantUniqueBonusScaling: 1
+  maximumDistance: 1000
+  expRewardCoefficient: 0.2
+  goldRewardCoefficient: 1
+  applyGoldAndExp: 0
 --- !u!114 &7154877068097204550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1629,6 +1696,9 @@ MonoBehaviour:
   shouldDisplayHealthBarOnHud: 1
   thresholdController: {fileID: 0}
   shouldCreateObjectiveEntry: 1
+  barrageOnBossDelayOverride: -1
+  shouldGenerateSpecialNameForHealthBar: 0
+  specialNameForHealthBar: 
   forceTier3Reward: 1
   currentPriority: 0
   bodiesOfCurrentPriority: 0
